@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Descubra quanto sobra do seu dinheiro todo mês</h1>
+
+      <p>
+        Sem planilhas, sem complicação. Veja seu rendimento mensal real em
+        poucos minutos.
+      </p>
+
+      <ul>
+        <li>✔ Controle simples de gastos</li>
+        <li>✔ Previsão do fim do mês</li>
+        <li>✔ Ideal para quem quer clareza financeira</li>
+      </ul>
+
+      <form action="https://formspree.io/f/mldqkjnj" method="POST">
+        <label for="dificuldade">Qual sua dificuldade financeira atual?</label>
+        <select
+          name="dificuldade"
+          onchange="toggleOutro(this, 'outro_dificuldade')"
+          required
+        >
+          <option value="">Selecione uma opção</option>
+          <option value="Controle_gastos">
+            Não sei quanto vai sobrar no fim do mês
+          </option>
+          <option value="Misturo_dinheiro">
+            Misturo dinheiro pessoal e trabalho
+          </option>
+          <option value="Perda-datas">e perco com contas / datas</option>
+          <option value="Nao_sei_lucro">Não sei se estou tendo lucro</option>
+          <option value="Impostos ">Impostos / taxas me confundem</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <input
+          type="text"
+          id="outro_dificuldade"
+          name="dificuldade_outro"
+          placeholder="Se 'Outro', descreva..."
+          class="other-input"
+        />
+
+        <label>O que mais te irrita nas soluções atuais?</label>
+        <select
+          name="irritabilidade"
+          onchange="toggleOutro(this, 'outro_irritabilidade')"
+          required
+        >
+          <option value="">Selecione</option>
+          <option value="complicadas">São complicadas demais</option>
+          <option value="Nao_mostram_lucro">Não mostram lucro real</option>
+          <option value="Dao_trabalho">Dão trabalho todo dia</option>
+          <option value="Nao_servem">Não servem para meu tipo de renda</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <input
+          type="text"
+          id="outro_irritabilidade"
+          name="irritabilidade_outro"
+          placeholder="O que mais te irrita?"
+          class="other-input"
+        />
+
+        <!-- Pergunta 3 -->
+        <label>Você já pagou por alguma ferramenta financeira?</label>
+        <select
+          name="pagamento"
+          onchange="toggleOutro(this, 'outro_pagamento')"
+          required
+        >
+          <option value="">Selecione</option>
+          <option value="sim">Sim, pago atualmente</option>
+          <option value="nao">Já paguei e parei</option>
+          <option value="talvez">Nunca paguei</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <input
+          type="text"
+          id="outro_pagamento"
+          name="pagamento_outro"
+          placeholder="Explique sua resposta"
+          class="other-input"
+        />
+
+        <label>Com que frequência ?</label>
+        <select
+          name="frequência_pagamento"
+          onchange="toggleOutro(this, 'outro_pagamento_valor')"
+          required
+        >
+          <option value="">Selecione</option>
+          <option value="Todo dia">Todo dia</option>
+          <option value="Toda semana">Toda semana</option>
+          <option value="Todo mes">Todo mês</option>
+          <option value="Raramente">Raramente</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <input
+          type="text"
+          id="outro_pagamento_valor"
+          name="pagamento_outro_valor"
+          placeholder="Quanto?"
+          class="other-input"
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Seu melhor email"
+          required
+        />
+
+        <!-- Campo opcional para entender o público -->
+        <select name="perfil">
+          <option value="">Você é...</option>
+          <option value="clt">CLT</option>
+          <option value="mei">MEI</option>
+          <option value="autonomo">Autônomo</option>
+          <option value="estudante">Estudante</option>
+        </select>
+
+        <!-- Tracking simples -->
+        <input type="hidden" name="origem" value="landing_financas_v1" />
+
+        <button type="submit">Quero acesso antecipado</button>
+      </form>
+
+      <div class="note">Projeto em desenvolvimento • acesso limitado</div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
